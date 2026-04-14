@@ -1,62 +1,55 @@
-# Personal Voice Assistant
+# Voice Assistant
 
-A Python voice assistant with a Tkinter GUI that supports typed commands and continuous microphone input, then speaks responses aloud.
+A Python-based voice assistant with a Tkinter desktop interface. It supports typed commands, microphone input, text-to-speech replies, basic web shortcuts, Wikipedia summaries, and live weather lookup.
 
-![Personal Voice Assistant screenshot](image.png)
+![Voice Assistant screenshot](image.png)
 
-## Overview
+## Project Summary
 
-- Speech recognition for spoken commands
-- Text-to-speech response output
-- Rule-based command handling
-- Ambient noise calibration for microphone input
-- Desktop interface built with Tkinter
+This project demonstrates a simple rule-based assistant built for desktop use. It is designed to handle common commands quickly without machine learning, which makes it easy to understand, extend, and present in an internship portfolio.
 
-## Features
+## Key Features
 
-- Speech-to-Text with `SpeechRecognition`
-- Text-to-Speech with `pyttsx3`
-- Opens websites with `webbrowser`
-- Answers basic questions like time, date, and Wikipedia summaries
-- Gives current weather for a city or location
-- Tkinter interface with text input and continuous voice listening
+- Speech recognition for voice commands
+- Text-to-speech responses
+- Tkinter GUI with typed input and continuous listening
+- Website shortcuts for common platforms
+- Time, date, weather, and greeting responses
+- Wikipedia summaries for quick information lookup
 
 ## Tech Stack
 
 - Python
+- Tkinter
 - SpeechRecognition
 - pyttsx3
 - PyAudio
 - wikipedia
-- webbrowser
+- Open-Meteo API
 
-## Workflow
+## Project Structure
 
-1. Listen: capture microphone input continuously or accept typed commands.
-2. Process: use simple `if` and `elif` rules to detect commands.
-3. Speak: return the answer with text-to-speech.
+- `assistant_core.py` - main assistant logic and command handling
+- `gui_app.py` - Tkinter desktop application
+- `requirements.txt` - package dependencies
+- `image.png` - project screenshot
 
-## How to Run
+## Setup
 
 1. Create and activate a virtual environment.
-2. Install dependencies:
+2. Install the dependencies:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Open the GUI version:
+3. Run the desktop app:
 
    ```bash
    python gui_app.py
    ```
 
-## Version Control Notes
-
-- Keep `.venv` and `__pycache__` out of the repository. They are already ignored by `.gitignore`.
-- Commit only the source files, `README.md`, `requirements.txt`, and `.gitignore`.
-
-## Useful Commands
+## Example Commands
 
 - `time` - tells the current time
 - `date` - tells the current date
@@ -64,24 +57,30 @@ A Python voice assistant with a Tkinter GUI that supports typed commands and con
 - `open google` - opens Google
 - `open github` - opens GitHub
 - `open leetcode` - opens LeetCode
-- `open linkedin` - opens LinkedIn
-- `open hackerrank` - opens HackerRank
-- `open codeforces` - opens Codeforces
-- `open codechef` - opens CodeChef
-- `search wikipedia python` - gives a short Wikipedia summary
-- `weather in london` - gives current weather for London
-- `show weather for delhi` - also gives current weather for Delhi
+- `search wikipedia python` - shows a short Wikipedia summary
+- `weather in london` - gets the current weather for London
+- `show weather for delhi` - gets the current weather for Delhi
 - `exit` or `quit` - closes the assistant
 
-## Project Structure
+## Notes for Use
 
-- `assistant_core.py` - shared assistant logic
-- `gui_app.py` - Tkinter desktop interface
-- `requirements.txt` - Python dependencies
-- `README.md` - project guide
+- This is a rule-based assistant, not an AI model.
+- Microphone input requires `SpeechRecognition` and `PyAudio`.
+- Weather lookup needs internet access because it uses the Open-Meteo API.
+- If voice input is not available, the text box still works.
 
-## Notes
+## Internship-Ready Summary
 
-- This is a rule-based assistant, not a machine learning model.
-- Audio input requires `PyAudio`.
-- Weather uses the free Open-Meteo API, so internet access is required.
+This repository is suitable for submission as a beginner-friendly Python project because it includes:
+
+- a working desktop interface
+- clear command handling logic
+- external API integration
+- text and voice interaction
+- a clean project structure with installation steps
+
+## Version Control Hygiene
+
+- Keep `.venv` and `__pycache__` out of the repository.
+- Commit only the source code, documentation, and dependency files.
+- Use descriptive commit messages for future changes.
