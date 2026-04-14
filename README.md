@@ -69,7 +69,7 @@ This project demonstrates a simple rule-based assistant built for desktop use. I
 - Weather lookup needs internet access because it uses the Open-Meteo API.
 - If voice input is not available, the text box still works.
 
-## Internship-Ready Summary
+## Summary
 
 This repository is suitable for submission as a beginner-friendly Python project because it includes:
 
